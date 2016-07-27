@@ -1,0 +1,161 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\hypersetup{
+    pdftitle={Javier Rizzo CV},
+    pdfauthor={Javier Rizzo},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,       % no lik border color
+   allbordercolors=white    % white border color for all
+}
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\newfontface\lserif{Liberation Serif}
+\newcommand{\Csh}{C{\lserif\#}}
+
+\begin{document}
+\header{Javier }{Rizzo}
+      {Cybernetics Electronics Engineering Student}
+      
+% Fake text to add separator      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+...
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+    ~
+    ~
+    ~
+  \section{Address}
+    Av. La Rivera, 1724, 
+    El Lienzo
+    Mexicali, B.C., México.
+    C.P. 21258
+    ~
+  \section{Phone}
+    +52 (686) 288 73 57
+    ~
+  \section{Email}
+    \href{mailto:javierrizzoa@gmail.com}{\textbf{javierrizzoa@}gmail.com}
+    ~
+  \section{Web \& Git}
+    \href{http://javierrizzo.com}{javierrizzo.com}
+    \href{https://github.com/javierrizzoa}{github.com/javierrizzoa}
+    ~
+  \section{Programming}
+  \textbf{Fluent in }
+  JavaScript, Python, \Csh{}, Java, Haxe
+  \textbf{Also know }
+  C, C++, Ruby, VB.Net
+    ~
+  \section{Other Skills}
+  HTML5, CSS3, Git, Node.js, SQL, WPF, Electronics, Arduino, \LaTeX
+  ~
+  \section{Hobbies}
+  Writing, Videogames, Competitive programming, Linux and VIM enthusiast.
+  ~
+  \section{Languages}
+    \textbf{Spanish}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{English}\includegraphics[scale=0.40]{img/4stars.png}
+\end{aside}
+
+\section{Education}
+  \entry
+    {2014 - now}
+    {Bachelor of Engineering in Cybernetics Electronics}
+    {Centro de Enseñanza Técnica y Superior (CETYS)}
+    {Expected to graduate in July 2018}
+
+\section{Side Projects}
+Available on my GitHub (\href{https://github.com/javierrizzoa}{github.com/javierrizzoa})
+
+\section{Experience}
+    \entry
+    {2016 - now}
+    {Programming contractor}
+    {Skyworks Inc (Mexicali, México)}
+    {Sofware development with \Csh{} and MSSQL}
+    \entry
+    {2016 - now}
+    {IT Intern}
+    {CETYS University (Mexicali, México)}
+    {Database management, MS Access programmer}
+    \entry
+    {2015}
+    {Videogame Programming Workshop Instructor}
+    {Trascendencias, CETYS University (Mexicali, México)}
+    {Workshop instructor of videogame programming basics (in Haxe).}
+    \entry
+    {2015}
+    {We Can Code Hackathon}
+    {We Can Code Hackathon (Ensenada, México)}
+    {24-hour hackathon were we built "Edumotion" using JavaScript and a LeapMotion.}
+    \entry
+    {2015 - now}
+    {Instructor at El Garage Project Hub}
+    {El Garage, Project Hub (Mexicali, México)}
+    {Instructor of programming and electronics workshops at the first makerspace on the Mexican Northwest.}
+    \entry
+    {2015 - 2016}
+    {SentinelFox Engineering Mentor}
+    {SentinelFox Engineering (Mexicali, México}
+    {Mentor of the FIRST Robotics team of CETYS Highschool.}
+    \entry
+    {2014}
+    {We Can Code Hackathon}
+    {We Can Code Hackathon (Ensenada, México)}
+    {8-hour hackathon where we built "Whiteboard", using \Csh{} and a Wiimote.}
+    \entry
+    {2014}
+    {Android Development Workshop Instructor}
+    {Markë, CETYS University (Mexicali, México)}
+    {Workshop of the basics of Android development.}
+    \entry
+    {2012 - 2014}
+    {Programming and Control Leader}
+    {Solar Engineering (Mexicali, México)}
+    {Made the electric system and Java programming (with the FRC API) of two robots for the FIRST Robotics Competition 2013 and 2014.}
+
+\section{Awards}
+  \entry
+    {2015}
+    {We Can Code Hackathon - 2nd Place}
+    {Major League Hacking (Ensenada, México)}
+    {\emph{24-hour hackathon were we built "Edumotion" using JavaScript and a LeapMotion.}}
+  \entry
+    {2013 - 2015}
+    {Concurso de Programación Proyecto Ingenería - 1st Place}
+    {CETYS (Mexicali, México)}
+    {\emph{College programming competition. Winner of the first place for three consecutive years (2013, 2014, and 2015.)}}
+  \entry
+    {2013}
+    {Rookie All-Star Award}
+    {FIRST Robotics Competition (San Diego, CA)}
+    {\emph{Robotics Competition, where the challenge was to make a robot that shoots freesbies to some goals.}}
+  \entry
+    {2012}
+    {Concurso de Programación Proyecto Ingenería - 2nd Place}
+    {CETYS (Mexicali, México)}
+    {\emph{College programming competition.}}
+  \entry
+    {2011}
+    {Scenery Beta PC - 3rd Place}
+    {SB IT Media, S.L. (Madrid, Spain)}
+    {\emph{PC Software competition where I developed ROMFinder, a webscrapper using VB.Net}}
+\\
+\begin{flushleft}
+\emph{Last update: October 1st, 2015}
+\end{flushleft}
+\begin{flushright}
+\emph{Javier Rizzo}
+\end{flushright}
+
+\end{document}
