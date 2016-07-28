@@ -2,6 +2,11 @@
 
 My Curriculum Vitae.
 
+##PDFs
+
+* [English](PDFs/cv-en.pdf)
+* [Spanish](PDFs/cv-es.pdf)
+
 ##Compiling
 
 ###English
