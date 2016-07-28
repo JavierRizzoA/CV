@@ -5,6 +5,7 @@
 \usepackage{color}
 \usepackage{xcolor}
 \usepackage{fontspec}
+\usepackage[spanish,english]{babel}
 \hypersetup{
     pdftitle={Javier Rizzo CV},
     pdfauthor={Javier Rizzo},
@@ -20,9 +21,22 @@
 \newfontface\lserif{Liberation Serif}
 \newcommand{\Csh}{C{\lserif\#}}
 
+
+\newcommand{\langes}[1]{%
+  \ifes\selectlanguage{english}#1\fi}
+\newcommand{\langen}[1]{%
+  \ifen\selectlanguage{english}#1\fi}
+
 \begin{document}
-\header{Javier }{Rizzo}
-      {Cybernetics Electronics Engineering Student}
+
+%For some reason, I can't use langes/langen commands here...
+\ifes
+  \header{Javier }{Rizzo}
+    {Estudiante de Ing. en Cibernética Electrónica}
+\else
+  \header{Javier }{Rizzo}
+    {Cybernetics Electronics Engineering Student}
+\fi
       
 % Fake text to add separator      
 \fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
@@ -34,13 +48,17 @@
     ~
     ~
     ~
-  \section{Address}
+  \section{%
+    \langes{Dirección}%
+    \langen{Address}}
     Av. La Rivera, 1724, 
     El Lienzo
     Mexicali, B.C., México.
     C.P. 21258
     ~
-  \section{Phone}
+  \section{%
+    \langes{Teléfono}%
+    \langen{Phone}}
     +52 (686) 288 73 57
     ~
   \section{Email}
@@ -50,109 +68,205 @@
     \href{http://javierrizzo.com}{javierrizzo.com}
     \href{https://github.com/javierrizzoa}{github.com/javierrizzoa}
     ~
-  \section{Programming}
-  \textbf{Fluent in }
+    \section{%
+      \langes{Programación}%
+      \langen{Programming}}
+  \textbf{%
+    \langes{Fluído en}%
+    \langen{Fluent in}}
   JavaScript, Python, \Csh{}, Java, Haxe
-  \textbf{Also know }
+  \textbf{%
+    \langes{Con experiencia en}%
+    \langen{Also know}}
   C, C++, Ruby, VB.Net
     ~
-  \section{Other Skills}
-  HTML5, CSS3, Git, Node.js, SQL, WPF, Electronics, Arduino, \LaTeX
+  \section{%
+    \langes{Otras habilidades}%
+    \langen{Other Skills}}
+    HTML5, CSS3, Git, Node.js, SQL, WPF, \langes{Electrónica}\langen{Electronics}, Arduino, \LaTeX
   ~
   \section{Hobbies}
-  Writing, Videogames, Competitive programming, Linux and VIM enthusiast.
+  \langes{Escribir, Videojuegos, Programación competitiva, Entusiasta de VIM y Linux.}%
+  \langen{Writing, Videogames, Competitive programming, Linux and VIM enthusiast.}
   ~
-  \section{Languages}
-    \textbf{Spanish}\includegraphics[scale=0.40]{img/5stars.png}
-    \textbf{English}\includegraphics[scale=0.40]{img/4stars.png}
+  \section{%
+    \langes{Idiomas}%
+    \langen{Languages}}
+    \textbf{%
+      \langes{Español}%
+      \langen{Spanish}}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{%
+      \langes{Inglés}%
+      \langen{English}}\includegraphics[scale=0.40]{img/4stars.png}
 \end{aside}
 
-\section{Education}
+%langes/langen commands couldn't be used here neither.
+%I'm beginning to hate LaTeX's cryptic error messages.
+%\section{\langes{Educación}\langen{Education}}
+\ifes
+  \section{Educación}
+\else
+  \section{Education}
+\fi
   \entry
-    {2014 - now}
-    {Bachelor of Engineering in Cybernetics Electronics}
-    {Centro de Enseñanza Técnica y Superior (CETYS)}
-    {Expected to graduate in July 2018}
+    {\langes{2014 - ahora}%
+      \langen{2014 - now}}
+    {\langes{Ingeniería en Cibernética Electrónica}%
+      \langen{Bachelor of Engineering in Cybernetics Electronics}}
+    {\langes{Centro de Enseñanza Técnica y Superior (CETYS)}%
+      \langen{Centro de Enseñanza Técnica y Superior (CETYS)}}
+    {\langes{A ser graduado en julio de 2018.}%
+      \langen{Expected to graduate in July 2018.}}
 
-\section{Side Projects}
-Available on my GitHub (\href{https://github.com/javierrizzoa}{github.com/javierrizzoa})
+\ifes
+  \section{Proyectos personales}
+\else
+  \section{Side Projects}
+\fi
+\langes{Disponibles en mi GitHub (\href{https://github.com/javierrizzoa}{github.com/javierrizzoa})}%
+\langen{Available on my GitHub (\href{https://github.com/javierrizzoa}{github.com/javierrizzoa})}
 
-\section{Experience}
+\ifes
+  \section{Experiencia}
+\else
+  \section{Experience}
+\fi
     \entry
-    {2016 - now}
-    {Programming contractor}
-    {Skyworks Inc (Mexicali, México)}
-    {Sofware development with \Csh{} and MSSQL}
+    {\langes{2016 - ahora}%
+      \langen{2016 - now}}
+    {\langes{Programador contratista}%
+      \langen{Programming contractor}}
+    {\langes{Skyworks Inc (Mexicali, México)}%
+      \langen{Skyworks Inc (Mexicali, Mexico)}}
+    {\langes{Desarrollo de software con \Csh{} y MSSQL.}%
+      \langen{Sofware development with \Csh{} and MSSQL.}}
     \entry
-    {2016 - now}
-    {IT Intern}
-    {CETYS University (Mexicali, México)}
-    {Database management, MS Access programmer}
+    {\langes{2016 - ahora}%
+      \langen{2016 - now}}
+    {\langes{Becario del área de informática}%
+      \langen{IT Intern}}
+    {\langes{CETYS Universidad (Mexicali, México)}%
+      \langen{CETYS University (Mexicali, Mexico)}}
+    {\langes{Administración de bases de datos, programador en MS Access.}%
+      \langen{Database management, MS Access programmer.}}
     \entry
-    {2015}
-    {Videogame Programming Workshop Instructor}
-    {Trascendencias, CETYS University (Mexicali, México)}
-    {Workshop instructor of videogame programming basics (in Haxe).}
+    {\langes{2015}%
+      \langen{2015}}
+    {\langes{Tallerista: Programación de videojuegos}%
+      \langen{Videogame Programming Workshop Instructor}}
+    {\langes{Trascendencias, CETYS Universidad (Mexicali, México)}%
+      \langen{Trascendencias, CETYS University (Mexicali, Mexico)}}
+    {\langes{Instructor del taller de "Programación de videojuegos" (en Haxe).}%
+      \langen{Workshop instructor of videogame programming basics (in Haxe).}}
     \entry
-    {2015}
-    {We Can Code Hackathon}
-    {We Can Code Hackathon (Ensenada, México)}
-    {24-hour hackathon were we built "Edumotion" using JavaScript and a LeapMotion.}
+    {\langes{2015}%
+      \langen{2015}}
+    {\langes{We Can Code Hackathon}%
+      \langen{We Can Code Hackathon}}
+    {\langes{We Can Code Hackathon (Ensenada, México)}%
+      \langen{We Can Code Hackathon (Ensenada, Mexico)}}
+    {\langes{Hackathon de 24 horas en el que creamos "Edumotion" usando JavaScript y un LeapMotion.}%
+      \langen{24-hour hackathon were we built "Edumotion" using JavaScript and a LeapMotion.}}
     \entry
-    {2015 - now}
-    {Instructor at El Garage Project Hub}
-    {El Garage, Project Hub (Mexicali, México)}
-    {Instructor of programming and electronics workshops at the first makerspace on the Mexican Northwest.}
+    {\langes{2015 - ahora}%
+      \langen{2015 - now}}
+    {\langes{Tallerista en El Garage Project Hub}%
+      \langen{Instructor at El Garage Project Hub}}
+    {\langes{El Garage, Project Hub (Mexicali, México)}%
+      \langen{El Garage, Project Hub (Mexicali, Mexico)}}
+    {\langes{Instructor en los talleres de programación y electrónica, en el primer makerspace del noroeste mexicano.}%
+      \langen{Instructor of programming and electronics workshops at the first makerspace on the Mexican Northwest.}}
     \entry
-    {2015 - 2016}
-    {SentinelFox Engineering Mentor}
-    {SentinelFox Engineering (Mexicali, México}
-    {Mentor of the FIRST Robotics team of CETYS Highschool.}
+    {\langes{2015 - 2016}%
+      \langen{2015 - 2016}}
+    {\langes{Mentor de SentinelFox Engineering}%
+      \langen{SentinelFox Engineering Mentor}}
+      {\langes{SentinelFox Engineering (Mexicali, México)}%
+      \langen{SentinelFox Engineering (Mexicali, Mexico)}}
+    {\langes{Mentor del equipo de robótica de FIRST de CETYS Preparatoria.}%
+      \langen{Mentor of the FIRST Robotics team of CETYS Highschool.}}
     \entry
-    {2014}
-    {We Can Code Hackathon}
-    {We Can Code Hackathon (Ensenada, México)}
-    {8-hour hackathon where we built "Whiteboard", using \Csh{} and a Wiimote.}
+    {\langes{2014}%
+      \langen{2014}}
+    {\langes{We Can Code Hackathon}%
+      \langen{We Can Code Hackathon}}
+    {\langes{We Can Code Hackathon (Ensenada, México)}%
+      \langen{We Can Code Hackathon (Ensenada, Mexico)}}
+    {\langes{Hackathon de 8 horas donde creamos "Whiteboard", usando \Csh{} y un Wiimote.}%
+      \langen{8-hour hackathon where we built "Whiteboard", using \Csh{} and a Wiimote.}}
     \entry
-    {2014}
-    {Android Development Workshop Instructor}
-    {Markë, CETYS University (Mexicali, México)}
-    {Workshop of the basics of Android development.}
+    {\langes{2014}%
+      \langen{2014}}
+    {\langes{Tallerista: Desarrollo de Apps para Android}%
+      \langen{Android Development Workshop Instructor}}
+    {\langes{Markë, CETYS Universidad (Mexicali, México)}%
+      \langen{Markë, CETYS University (Mexicali, Mexico)}}
+    {\langes{Instructor del taller, en el que se explicaron las bases del desarrollo en Android.}%
+      \langen{Workshop of the basics of Android development.}}
     \entry
-    {2012 - 2014}
-    {Programming and Control Leader}
-    {Solar Engineering (Mexicali, México)}
-    {Made the electric system and Java programming (with the FRC API) of two robots for the FIRST Robotics Competition 2013 and 2014.}
+    {\langes{2012 - 2014}%
+      \langen{2012 - 2014}}
+    {\langes{Líder de programación y control}%
+      \langen{Programming and Control Leader}}
+    {\langes{Solar Engineering (Mexicali, México)}%
+      \langen{Solar Engineering (Mexicali, Mexico)}}
+    {\langes{Sistema eléctrico y programación en Java (con el API de FRC) de dos robots para la FIRST Robotics Competition 2013 y 2014}%
+      \langen{Made the electric system and Java programming (with the FRC API) of two robots for the FIRST Robotics Competition 2013 and 2014.}}
 
+\ifes
+\section{Reconocimientos}
+\else
 \section{Awards}
+\fi
   \entry
-    {2015}
-    {We Can Code Hackathon - 2nd Place}
-    {Major League Hacking (Ensenada, México)}
-    {\emph{24-hour hackathon were we built "Edumotion" using JavaScript and a LeapMotion.}}
+  {\langes{}%
+    \langen{2015}}
+  {\langes{We Can Code Hackathon - 2do lugar}%
+    \langen{We Can Code Hackathon - 2nd Place}}
+  {\langes{Major League Hacking (Ensenada, México)}%
+    \langen{Major League Hacking (Ensenada, Mexico)}}
+  {\emph{\langes{Hackathon de 24 horas donde creamos "Edumotion" usando JavaScript y un LeapMotion.}%
+    \langen{24-hour hackathon were we built "Edumotion" using JavaScript and a LeapMotion.}}}
   \entry
-    {2013 - 2015}
-    {Concurso de Programación Proyecto Ingenería - 1st Place}
-    {CETYS (Mexicali, México)}
-    {\emph{College programming competition. Winner of the first place for three consecutive years (2013, 2014, and 2015.)}}
+  {\langes{}%
+    \langen{2013 - 2015}}
+  {\langes{Concurso de Programación Proyecto Ingenería - 1er lugar}%
+    \langen{Concurso de Programación Proyecto Ingenería - 1st Place}}
+  {\langes{CETYS (Mexicali, México)}%
+    \langen{CETYS (Mexicali, Mexico)}}
+  {\emph{\langes{Concurso de programación universitario. Ganador del primer lugar por tres años consecutivos (2013, 2014 y 2015).}%
+    \langen{College programming competition. Winner of the first place for three consecutive years (2013, 2014, and 2015).}}}
   \entry
-    {2013}
-    {Rookie All-Star Award}
-    {FIRST Robotics Competition (San Diego, CA)}
-    {\emph{Robotics Competition, where the challenge was to make a robot that shoots freesbies to some goals.}}
+  {\langes{2013}%
+    \langen{2013}}
+  {\langes{Rookie All-Star Award}%
+    \langen{Rookie All-Star Award}}
+  {\langes{FIRST Robotics Competition (San Diego, CA)}%
+    \langen{FIRST Robotics Competition (San Diego, CA)}}
+  {\emph{\langes{Competencia de robótica, donde el reto era hacer un robot que disparara freesbies a unas porterías.}%
+    \langen{Robotics Competition, where the challenge was to make a robot that shoots freesbies to some goals.}}}
   \entry
-    {2012}
-    {Concurso de Programación Proyecto Ingenería - 2nd Place}
-    {CETYS (Mexicali, México)}
-    {\emph{College programming competition.}}
+  {\langes{2012}%
+    \langen{2012}}
+  {\langes{Concurso de Programación Proyecto Ingenería - 2do lugar}%
+    \langen{Concurso de Programación Proyecto Ingenería - 2nd Place}}
+  {\langes{CETYS (Mexicali, México)}%
+    \langen{CETYS (Mexicali, Mexico)}}
+  {\emph{\langes{Concurso de programación universitario.}%
+    \langen{College programming competition.}}}
   \entry
-    {2011}
-    {Scenery Beta PC - 3rd Place}
-    {SB IT Media, S.L. (Madrid, Spain)}
-    {\emph{PC Software competition where I developed ROMFinder, a webscrapper using VB.Net}}
+  {\langes{2011}%
+    \langen{2011}}
+  {\langes{Scenery Beta PC - 3er lugar}%
+    \langen{Scenery Beta PC - 3rd Place}}
+  {\langes{SB IT Media, S.L. (Madrid, España)}%
+    \langen{SB IT Media, S.L. (Madrid, Spain)}}
+  {\emph{\langes{Concurso de programación donde creé ROMFinder, un webscrapper hecho en VB.Net}%
+    \langen{PC Software competition where I developed ROMFinder, a webscrapper using VB.Net}}}
 \\
 \begin{flushleft}
-\emph{Last update: July 26th, 2016}
+\emph{\langes{Última actualización: Julio 27, 2016}%
+  \langen{Last update: July 27th, 2016}}
 \end{flushleft}
 \begin{flushright}
 \emph{Javier Rizzo}
