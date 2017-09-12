@@ -1,26 +1,26 @@
-#CV
+# CV
 
 My Curriculum Vitae.
 
-##PDFs
+## PDFs
 
 * [English](PDFs/cv-en.pdf)
 * [Spanish](PDFs/cv-es.pdf)
 
-##Compiling
+## Compiling
 
-###English
+### English
 
 ```bash
 xelatex -jobname=PDFs/cv-en "\newif\ifes\newif\ifen\entrue \input{cv}" 
 ```
 
-###Spanish
+### Spanish
 
 ```bash
 xelatex -jobname=PDFs/cv-es "\newif\ifes\newif\ifen\estrue \input{cv}" 
 ```
-##License
+## License
 
 ### Do what the fuck you want to public license
 
