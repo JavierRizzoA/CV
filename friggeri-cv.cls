@@ -156,7 +156,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 }
 
 \renewcommand{\section}[1]{
-  \par\vspace{\parskip}
+  %\par\vspace{\parskip}
   {%
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
@@ -192,8 +192,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     \hfill%
     {\footnotesize\addfontfeature{Color=pblue} #3}\\%
     #4\vspace{\parsep}%
-    \\
-  }\\
+  }
 \end{entrylist}
 }
 \newcommand{\compactentry}[4]{%

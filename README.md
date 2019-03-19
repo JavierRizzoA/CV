@@ -9,17 +9,8 @@ My Curriculum Vitae.
 
 ## Compiling
 
-### English
+Just run `build.sh` and it will generate PDFs in both English and Spanish.
 
-```bash
-xelatex -jobname=PDFs/cv-en "\newif\ifes\newif\ifen\entrue \input{cv}" 
-```
-
-### Spanish
-
-```bash
-xelatex -jobname=PDFs/cv-es "\newif\ifes\newif\ifen\estrue \input{cv}" 
-```
 ## License
 
 ### Do what the fuck you want to public license
